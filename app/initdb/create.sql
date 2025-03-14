@@ -77,3 +77,6 @@ INSERT INTO `transaction` (`fk_issuer_id`, `fk_payee_id`, `date`, `amount`, `des
 	(5, 4, '2022-10-24 17:39:55', 8.00, 'Movie tickets'),
 	(3, 5, '2022-10-24 17:41:03', 25.00, 'Trip money'),
 	(5, 2, '2022-10-24 17:41:40', 10.00, 'Restaurant bill share');
+
+SHOW TABLES;
+SELECT * FROM users;

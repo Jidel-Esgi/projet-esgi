@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: paymybuddy-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: paymybuddy-backend
+  template:
+    metadata:
+      labels:
+        app: paymybuddy-backend
+    spec:
+      containers:
+        - name: backend
+          image: amazoncorretto:17-alpine
+          envFrom:
+            - configMapRef:
+                name: paymybuddy-config
+            - secretRef:
+                name: paymybuddy-secret
+          ports:
+            - containerPort: 8080
+          command: ["java", "-jar", "paymybuddy.jar"]

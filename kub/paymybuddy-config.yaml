@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: paymybuddy-config
+data:
+  SPRING_DATASOURCE_URL: "jdbc:mysql://paymybuddy-db:3306/db_paymybuddy"
+  SPRING_DATASOURCE_USERNAME: "root"
