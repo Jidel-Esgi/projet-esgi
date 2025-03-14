@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: amazoncorretto:17-alpine
+          image: jidel1/projet-jidel-paymybuddy-backend
           envFrom:
             - configMapRef:
                 name: paymybuddy-config

@@ -1,8 +1,6 @@
 services:
   paymybuddy-db:
-    build:
-          context: .
-          target: mysql
+    image: jidel1/projet-jidel-paymybuddy-db
     container_name: paymybuddy-db
     restart: always
     volumes:
@@ -11,9 +9,7 @@ services:
       - "3306:3306"
 
   paymybuddy-backend:
-    build:
-          context: .
-          target: backend
+    image: jidel1/projet-jidel-paymybuddy-backend
     depends_on:
       - paymybuddy-db
     container_name: paymybuddy-backend
